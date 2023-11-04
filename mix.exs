@@ -5,8 +5,8 @@ defmodule QuickAlias.Mixfile do
     [app: :quick_alias,
      version: "0.1.0",
      elixir: "~> 1.3",
-     build_embedded: Mix.env == :prod,
-     start_permanent: Mix.env == :prod,
+     build_embedded: Mix.env() == :prod,
+     start_permanent: Mix.env() == :prod,
      deps: deps(),
      package: package()]
   end
@@ -30,3 +30,4 @@ defmodule QuickAlias.Mixfile do
     ]
   end
 end
+)(
